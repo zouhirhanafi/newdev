@@ -1,0 +1,15 @@
+version: '3.9'
+services:
+  jenkins:
+    image: jenkins/jenkins:lts
+    volumes:
+        - jenkins_home:/var/jenkins_home
+    ports:
+      - 5080:8080
+      - 50000:50000
+volumes:
+  jenkins_home:
+
+# Please use the following password to proceed to installation:
+#   625130244b4346b3b7463ebed9c1f085
+#   This may also be found at: /var/jenkins_home/secrets/initialAdminPassword
